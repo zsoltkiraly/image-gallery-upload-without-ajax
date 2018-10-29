@@ -3,8 +3,6 @@
 <br />
 <a href="" target="_blank">DEMO PAGE</a>
 
-<img src="">
-
 #
 <br />
 
