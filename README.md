@@ -1,7 +1,7 @@
 # Image gallery upload without ajax v1.0.0
 
 <br />
-<a href="" target="_blank">DEMO PAGE</a>
+<a href="http://zsoltkiraly.com/developments/image-gallery-upload-without-ajax/" target="_blank">DEMO PAGE</a>
 
 #
 <br />
