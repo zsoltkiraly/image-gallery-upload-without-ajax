@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Image gallery upload without ajax v1.0.0 by Zsolt Kiraly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Image gallery upload without ajax <span>Image gallery upload without ajax v1.0.0 by Zsolt Kiraly</span></h1>
+    </header>
+
+    <section class="basic-content">
+        <h2>Sed et volutpat ligula</h2>
+        <p>Donec quis lorem sit amet tortor varius consectetur. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum quam diam, sit amet iaculis ex commodo id. Maecenas vitae finibus massa. Suspendisse potenti. Donec pulvinar nunc ut elit porttitor mattis.</p>
+
+        <p>Cras non arcu quis turpis lacinia suscipit et a purus. Mauris eu maximus massa. Nam sed vestibulum orci, ut cursus neque. Fusce eget dui eros. Mauris dictum lacus a eros fermentum, eu fringilla elit scelerisque. Sed et varius mauris. Pellentesque in ligula a mi lobortis rutrum. Vestibulum ac pretium nulla. Pellentesque tempor augue at purus tincidunt, maximus semper nisl blandit.</p>
+
+        <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat a.</p>
+    </section>
+
+    <section class="gallery-upload-section">
+        <form action="" method="get">
+
+            <section class="image-gallery-upload">
+                <div class="gallery-upload">
+                    <div id="drag-and-drop-upload">
+                        <div id="drag-and-drop-start" class="active opacity-show">
+                            <span class="teka-color-gray-light">Drag the pictures here!</span>
+                        </div>
+                        <div class="drag-container">
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info text-small teka-color-gray-light">
+                    Images should have a minimum of 300×300 pixels, maximum 1920×1920 pixels! Please do not use catalogs downloaded from the internet!
+                </div>
+
+                <label id="gallery-upload-button" for="file-input">Select images</label>
+                <input id="file-input" type="file" name="" multiple>
+
+                <div id="amount-container" class="upload-amount in-active">Upload <span>14</span> more pictures.</div>
+
+            </section>
+
+        </form>
+    </section>
+
+    <section class="basic-content">
+        <h2>Sed et volutpat ligula</h2>
+        <p>Donec quis lorem sit amet tortor varius consectetur. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum quam diam, sit amet iaculis ex commodo id. Maecenas vitae finibus massa. Suspendisse potenti. Donec pulvinar nunc ut elit porttitor mattis.</p>
+
+        <p>Cras non arcu quis turpis lacinia suscipit et a purus. Mauris eu maximus massa. Nam sed vestibulum orci, ut cursus neque. Fusce eget dui eros. Mauris dictum lacus a eros fermentum, eu fringilla elit scelerisque. Sed et varius mauris. Pellentesque in ligula a mi lobortis rutrum. Vestibulum ac pretium nulla. Pellentesque tempor augue at purus tincidunt, maximus semper nisl blandit.</p>
+
+        <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat a.</p>
+    </section>
+
+    <footer>
+        <span>GitHub:</span> <a href="https://github.com/zsoltkiraly" title="GitHub" target="_blank">https://github.com/zsoltkiraly</a>
+    </footer>
+
+    <script>
+        class FileList {
+          constructor(...items) {
+
+            items = [].concat(...items);
+
+            if (items.length && !items.every(file => file instanceof File)) {
+              throw new TypeError('FileList, File, File objects');
+            }
+
+            const dt = new ClipboardEvent('').clipboardData || new DataTransfer();
+            
+            for (let file of items) {
+              dt.items.add(file)
+            }
+            return dt.files;
+          }
+        }
+    </script>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
