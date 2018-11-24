@@ -3,7 +3,7 @@
 <br />
 <a href="http://zsoltkiraly.com/developments/image-gallery-upload-without-ajax/" target="_blank">DEMO PAGE</a><br /><br />
 
-<img src="http://zsoltkiraly.com/developments/_images/file-upload-001.jpg">
+<img src="http://zsoltkiraly.com/developments/_images/image-gallery-upload-without-ajax-001.jpg">
 
 
 ## IMAGE GALLERY UPLOAD WITHOUT AJAX FUNCTIONS
