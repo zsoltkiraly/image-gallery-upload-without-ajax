@@ -6,7 +6,7 @@
 <img src="http://zsoltkiraly.com/developments/_images/file-upload-001.jpg">
 
 
-## Image gallery upload without ajax FUNCTIONS
+## IMAGE GALLERY UPLOAD WITHOUT AJAX FUNCTIONS
 
 - Full responsive
 - Drag & drop
