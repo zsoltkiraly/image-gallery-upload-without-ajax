@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -25,7 +24,7 @@
         <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat a.</p>
     </section>
 
-    <section class="gallery-upload-section">
+    <section id="gallery-upload-section-1" class="gallery-upload-section">
         <form action="" method="get">
 
             <section class="image-gallery-upload">
@@ -80,27 +79,6 @@
         <span>GitHub:</span> <a href="https://github.com/zsoltkiraly" title="GitHub" target="_blank">https://github.com/zsoltkiraly</a>
     </footer>
 
-    <script>
-        class FileList {
-          constructor(...items) {
-
-            items = [].concat(...items);
-
-            if (items.length && !items.every(file => file instanceof File)) {
-              throw new TypeError('FileList, File, File objects');
-            }
-
-            const dt = new ClipboardEvent('').clipboardData || new DataTransfer();
-            
-            for (let file of items) {
-              dt.items.add(file)
-            }
-            return dt.files;
-          }
-        }
-    </script>
-
-    <script src="js/scripts.js"></script>
-
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>

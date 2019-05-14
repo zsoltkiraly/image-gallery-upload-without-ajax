@@ -3,9 +3,27 @@ Image gallery upload without ajax - Code by Zsolt Király
 v1.0.0 - 2018-10-24
 */
 
+'use strict';
+
 var eventGallery = function() {
 
-    'use strict';
+    class FileList {
+        constructor(...items) {
+
+            items = [].concat(...items);
+
+            if (items.length && !items.every(file => file instanceof File)) {
+            throw new TypeError('FileList, File, File objects');
+            }
+
+            const dt = new ClipboardEvent('').clipboardData || new DataTransfer();
+            
+            for (let file of items) {
+            dt.items.add(file)
+            }
+            return dt.files;
+        }
+    }
 
     function signatura() {
         if (window['console']) {
